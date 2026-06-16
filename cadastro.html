@@ -2,13 +2,152 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<!DOCTYPE html>
-<html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - RoboMaker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at top, #f8f2f4, #ffffff 45%);
+            color: #2c2f33;
+            line-height: 1.6;
+        }
+
+        body, input, select, button, textarea {
+            font-family: inherit;
+        }
+
+        header {
+            background: #ffffff;
+            padding: 1.5rem 2rem;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        header h1 {
+            font-size: 1.9rem;
+            color: #b71c1c;
+        }
+
+        header nav a {
+            color: #2c2f33;
+            font-weight: 600;
+            transition: color 0.2s ease;
+        }
+
+        header nav a:hover {
+            color: #b71c1c;
+        }
+
+        main {
+            max-width: 760px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background: #ffffff;
+            border-radius: 28px;
+            padding: 2rem;
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.05);
+        }
+
+        form {
+            display: grid;
+            gap: 1.4rem;
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: #383c44;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 0.95rem 1rem;
+            border-radius: 16px;
+            border: 1px solid #dcdfe4;
+            background: #f8f8fa;
+            color: #2c2f33;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #b71c1c;
+            box-shadow: 0 0 0 4px rgba(183, 28, 28, 0.12);
+        }
+
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .radio-group label {
+            background: #fff;
+            border: 1px solid #dcdfe4;
+            border-radius: 16px;
+            padding: 0.85rem 1rem;
+            cursor: pointer;
+        }
+
+        .radio-group input {
+            margin-right: 0.5rem;
+        }
+
+        button {
+            border: none;
+            border-radius: 18px;
+            background: linear-gradient(135deg, #b71c1c, #f03e3e);
+            color: white;
+            padding: 1rem 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s ease, filter 0.2s ease;
+        }
+
+        button:hover {
+            filter: brightness(1.05);
+            transform: translateY(-1px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem 2rem 2.5rem;
+            color: #5b5f68;
+        }
+
+        footer p {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 680px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            main {
+                margin-top: 1.5rem;
+                padding: 0 1rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -39,8 +178,7 @@
                     <input type="password" id="senha" name="senha" required>
                 </div>
 
-                <div>
-                    <label>Perfil de Aluno:</label>
+                <div class="radio-group">
                     <label>
                         <input type="radio" name="perfil" value="estudante" required>
                         Estudante
